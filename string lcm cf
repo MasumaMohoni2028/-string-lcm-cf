@@ -1,0 +1,27 @@
+//string lcm using function
+******************************
+#include<bits/stdc++.h>
+#define ll long long
+using namespace std;
+string check(string s,int k)
+{
+	string r="";
+	while(k--)
+	{
+		r+=s;
+	}
+	return r;
+}
+int main()
+{
+	int tc;
+	cin>>tc;
+	while(tc--){
+	string s,t;
+	cin>>s>>t;
+	int g=__gcd(s.size(),t.size());
+	if(check(s,t.size()/g)==check(t,s.size()/g))
+	cout<<check(s,t.size()/g)<<endl;
+	else cout<<"-1"<<endl;
+	}
+}
